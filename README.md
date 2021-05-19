@@ -5,6 +5,7 @@ landing page section for frontend mentor.
 - landing page section
 - sidebar toggle on mobile devices
 - aos.js
+- custom scrollbar
 - preloader
 
 #### Technologies used
