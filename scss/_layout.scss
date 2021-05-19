@@ -2,6 +2,7 @@
 .container {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   background: url("../images/bg-desktop.svg") center/cover no-repeat
     color(violet);
 }
@@ -30,6 +31,10 @@
       outline: 0;
       transition: $linkTransition;
 
+      @include responsive(md) {
+        display: none;
+      }
+
       &:hover,
       &:focus {
         color: color(softMagenta);
@@ -42,6 +47,10 @@
 .hero {
   padding-top: 5rem;
 
+  @include responsive(md) {
+    padding-top: 2rem;
+  }
+
   &__content {
     @include maxWidthLg;
     @include sectionSpacing;
@@ -50,21 +59,37 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__info {
     color: color(white);
     padding: 2rem;
 
+    @include responsive(md) {
+      order: -1;
+    }
+
     &__heading {
       @include headingStyles;
       font-size: size(xxl) + 1rem;
+
+      @include responsive(lg) {
+        font-size: size(xxl);
+      }
     }
 
     &__lead {
       @include textStyles;
       font-size: size(sm);
       padding: 2rem 0;
+
+      @include responsive(lg) {
+        font-size: size(xs);
+      }
     }
   }
 
@@ -72,6 +97,7 @@
     @include maxWidthLg;
     @include flexCenter;
     justify-content: flex-end;
+    padding: 2rem;
 
     &__icon {
       @include flexCenter;
