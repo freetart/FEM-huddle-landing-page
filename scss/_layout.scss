@@ -360,3 +360,31 @@
   visibility: hidden;
   opacity: 0;
 }
+
+// footer
+.footer {
+  @include flexCenter;
+  text-align: center;
+  flex-wrap: wrap;
+
+  h3 {
+    @include textStyles;
+    font-size: size(xxs);
+    color: color(white);
+  }
+
+  a {
+    @include headingStyles;
+    color: color(white);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    width: 5rem;
+  }
+}
