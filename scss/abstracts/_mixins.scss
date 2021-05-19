@@ -1,0 +1,41 @@
+// section styles
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sectionSpacing() {
+  padding: 5rem 2rem;
+}
+
+// typography styles
+@mixin headingStyles() {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+}
+
+@mixin textStyles() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
+
+// container styles
+@mixin maxWidthLg() {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@mixin maxWidthMd() {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin maxWidthSm() {
+  max-width: 1000px;
+  margin: 0 auto;
+}

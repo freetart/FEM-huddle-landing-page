@@ -1,0 +1,28 @@
+// colors
+$colors: (
+  // shades
+  black: hsl(0, 0%, 0%),
+  white: hsl(0, 0%, 100%),
+  // primary
+  violet: hsl(257, 40%, 49%),
+  softMagenta: hsl(300, 69%, 71%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// font sizes
+$font-sizes: (
+  xxl: 3.5rem,
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.8rem,
+  xs: 1.6rem,
+  xxs: 1.3rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
