@@ -1,1 +1,23 @@
-// components
+// buttons
+.btn {
+  @include textStyles;
+  padding: 1.5rem 6rem;
+  font-size: size(sm);
+  outline: 0;
+  border: 0;
+}
+
+.btn--primary {
+  color: color(violet);
+  background-color: color(white);
+  display: inline-block;
+  border-radius: 4rem;
+  box-shadow: 0.2rem 0.2rem 1rem lighten(color(black), 15%);
+  transition: $btnTransition;
+
+  &:hover,
+  &:focus {
+    background-color: color(softMagenta);
+    color: color(white);
+  }
+}

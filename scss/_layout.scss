@@ -1,1 +1,94 @@
-// layout
+// container
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url("../images/bg-desktop.svg") center/cover no-repeat
+    color(violet);
+}
+
+// nav
+.nav {
+  @include maxWidthLg;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  &__logo {
+    &__img {
+      width: 20rem;
+    }
+  }
+
+  &__links {
+    &__link {
+      @include textStyles;
+      color: color(white);
+      font-size: size(xs);
+      margin: 0 2rem;
+      outline: 0;
+      transition: $linkTransition;
+
+      &:hover,
+      &:focus {
+        color: color(softMagenta);
+      }
+    }
+  }
+}
+
+// hero
+.hero {
+  padding-top: 5rem;
+
+  &__content {
+    @include maxWidthLg;
+    @include sectionSpacing;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__info {
+    color: color(white);
+    padding: 2rem;
+
+    &__heading {
+      @include headingStyles;
+      font-size: size(xxl) + 1rem;
+    }
+
+    &__lead {
+      @include textStyles;
+      font-size: size(sm);
+      padding: 2rem 0;
+    }
+  }
+
+  &__links {
+    @include maxWidthLg;
+    @include flexCenter;
+    justify-content: flex-end;
+
+    &__icon {
+      @include flexCenter;
+      color: color(white);
+      font-size: size(sm);
+      border: 0.1rem solid color(white);
+      margin: 1rem;
+      padding: 0.8rem;
+      border-radius: 50%;
+      outline: 0;
+      transition: $linkTransition;
+
+      &:hover,
+      &:focus {
+        color: color(softMagenta);
+        border-color: color(softMagenta);
+      }
+    }
+  }
+}
