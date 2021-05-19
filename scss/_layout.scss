@@ -19,6 +19,10 @@
   &__logo {
     &__img {
       width: 20rem;
+
+      @include responsive(md) {
+        width: 15rem;
+      }
     }
   }
 
@@ -93,11 +97,15 @@
     }
   }
 
-  &__links {
+  &__socials {
     @include maxWidthLg;
     @include flexCenter;
     justify-content: flex-end;
     padding: 2rem;
+
+    @include responsive(md) {
+      display: none;
+    }
 
     &__icon {
       @include flexCenter;
@@ -140,4 +148,117 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: lighten(color(softMagenta), 10%);
+}
+
+// hamburger menu
+.nav__hamburger {
+  display: none;
+  color: color(white);
+  font-size: size(xxl);
+  background: transparent;
+  outline: 0;
+  border: 0;
+
+  @include responsive(md) {
+    display: block;
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 70vw;
+  background: color(black);
+  padding: 2rem;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1000;
+  visibility: hidden;
+  transition: $sidebarTransition;
+
+  @include responsive(sm) {
+    width: 80vw;
+  }
+
+  @include responsive(resize) {
+    display: none;
+  }
+
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    @include flexCenter;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__links {
+    @include flexCenter;
+    flex-direction: column;
+
+    .nav__sidebar__link {
+      @include textStyles;
+      color: color(white);
+      font-size: size(lg);
+      margin: 1.5rem 0;
+      transition: $linkTransition;
+
+      &:hover,
+      &:focus {
+        color: color(softMagenta);
+      }
+    }
+  }
+
+  &__socials {
+    @include flexCenter;
+
+    .nav__sidebar__social {
+      color: color(white);
+      font-size: size(sm);
+      border: 0.1rem solid color(white);
+      margin: 1rem;
+      padding: 0.8rem;
+      border-radius: 50%;
+      outline: 0;
+      transition: $linkTransition;
+
+      &:hover,
+      &:focus {
+        color: color(softMagenta);
+        border-color: color(softMagenta);
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+
+  @include responsive(resize) {
+    display: none;
+  }
+
+  &.hidden {
+    display: none;
+  }
 }

@@ -16,16 +16,54 @@
   </head>
   <body>
     <div class="container">
+      <!-- overlay -->
+      <div class="overlay hidden"></div>
       <!-- nav -->
       <nav class="nav">
         <a href="#!" class="nav__logo">
           <img src="./images/logo.svg" alt="logo" class="nav__logo__img" />
         </a>
+        <!-- desktop links -->
         <div class="nav__links">
           <a href="#!" class="nav__links__link">Features</a>
           <a href="#!" class="nav__links__link">About Us</a>
           <a href="#!" class="nav__links__link">Contact</a>
         </div>
+        <!-- hamburger icon - mobile -->
+        <button type="button" class="nav__hamburger nav__hamburger--open">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- hamburger menu - mobile -->
+        <aside class="nav__sidebar">
+          <div class="btn-container">
+            <button type="button" class="nav__hamburger nav__hamburger--close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="nav__sidebar__content">
+            <img
+              src="./images/logo.svg"
+              alt="logo"
+              class="nav__sidebar__logo"
+            />
+            <div class="nav__sidebar__links">
+              <a href="#!" class="nav__sidebar__link">Features</a>
+              <a href="#!" class="nav__sidebar__link">About Us</a>
+              <a href="#!" class="nav__sidebar__link">Contact</a>
+            </div>
+            <div class="nav__sidebar__socials">
+              <a href="#!" class="nav__sidebar__social">
+                <i class="fab fa-facebook-f fa-fw"></i>
+              </a>
+              <a href="#!" class="nav__sidebar__social">
+                <i class="fab fa-twitter fa-fw"></i>
+              </a>
+              <a href="#!" class="nav__sidebar__social">
+                <i class="fab fa-instagram fa-fw"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
       </nav>
       <!-- hero -->
       <header class="hero">
@@ -49,14 +87,14 @@
             <a href="#!" class="btn btn--primary">Register</a>
           </div>
         </div>
-        <div class="hero__links">
-          <a href="#!" class="hero__links__icon">
+        <div class="hero__socials">
+          <a href="#!" class="hero__socials__icon">
             <i class="fab fa-facebook-f fa-fw"></i>
           </a>
-          <a href="#!" class="hero__links__icon">
+          <a href="#!" class="hero__socials__icon">
             <i class="fab fa-twitter fa-fw"></i>
           </a>
-          <a href="#!" class="hero__links__icon">
+          <a href="#!" class="hero__socials__icon">
             <i class="fab fa-instagram fa-fw"></i>
           </a>
         </div>

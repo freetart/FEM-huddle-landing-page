@@ -53,4 +53,16 @@
       @content;
     }
   }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == resize) {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
 }
