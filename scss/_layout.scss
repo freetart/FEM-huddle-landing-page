@@ -202,12 +202,17 @@
     @include flexCenter;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
+  }
+
+  &__logo {
+    width: 20rem;
   }
 
   &__links {
     @include flexCenter;
     flex-direction: column;
+    text-align: left;
 
     .nav__sidebar__link {
       @include textStyles;
